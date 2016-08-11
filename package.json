@@ -1,0 +1,18 @@
+{
+  "name": "mix-h5",
+  "version": "0.0.6",
+  "description": "h5 developer tools, copyright mix corp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mix-h5 mix h5"
+  ],
+  "author": "DestinyXie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DestinyXie/MixH5.git"
+  },
+  "license": "MIT"
+}
