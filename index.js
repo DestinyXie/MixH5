@@ -7,7 +7,9 @@
 
 
 var tracking = require('./lib/log.js');
+var imgLoader = require('./lib/image-loader.js');
 
 module.exports = {
-    tracking: tracking
+    tracking: tracking,
+    imgLoader: imgLoader
 };

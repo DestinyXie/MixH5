@@ -1,7 +1,7 @@
 {
   "name": "mix-h5",
   "version": "0.0.6",
-  "description": "h5 developer tools, copyright mix corp.",
+  "description": "h5 develop tools, copyright mix corp.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

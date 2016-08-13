@@ -1,4 +1,4 @@
-H5 delevep tools.
+H5 develop tools.
 
 ## Installation
 
@@ -19,3 +19,16 @@ tracking.add('cnzz', 'xxxxxx'); // cnzz site id
 setTimeout(function() {
     tracking.log('loaded');
 }, 1000};
+
+
+// img preloader
+var imgLoader = mixtool.imgLoader;
+// over: preload over, count: loaded image length, length: preload image total length
+// map: loaded image name, percent: count/length, fakePercent: fake percent
+imgLoader.preloadImg(function(over, count, length, map, percent, fakePercent) {
+    if(over && 100 == percent) {
+        // todo
+    } else {
+        console.log(percent);
+    }
+});
