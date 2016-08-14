@@ -31,4 +31,10 @@ imgLoader.preloadImg(function(over, count, length, map, percent, fakePercent) {
     } else {
         console.log(percent);
     }
+}, {
+    selector: 'xxx', // 预加载图片地址筛选器, default: '.image-resource-wrap span, img.image-resource'
+    fakeTime: xxx, // 模拟加载时间, default: 2000
+    fakePercent: xxx // 模拟加载百分比, default: 50
 });
+// get preload image
+imgLoader.get('images/logo.png'); // 返回带版本号的图片地址，如果有cdn前缀就返回前缀

@@ -6,10 +6,12 @@
  */
 
 
+var util = require('./lib/base.js');
 var tracking = require('./lib/log.js');
 var imgLoader = require('./lib/image-loader.js');
 
 module.exports = {
+    util: util,
     tracking: tracking,
     imgLoader: imgLoader
 };
