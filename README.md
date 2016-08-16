@@ -9,7 +9,8 @@ H5 develop tools.
 ```js
 var mixtool = require('mix-h5');
 
-// tracking
+
+// 统计（百度，cnzz）
 var tracking = mixtool.tracking;
 // init tracking
 tracking.add('baidu', 'xxxxxx'); // baidu site id
@@ -21,7 +22,7 @@ setTimeout(function() {
 }, 1000};
 
 
-// img preloader
+// 图片预加载
 var imgLoader = mixtool.imgLoader;
 // over: preload over, count: loaded image length, length: preload image total length
 // map: loaded image name, percent: count/length, fakePercent: fake percent
@@ -38,3 +39,54 @@ imgLoader.preloadImg(function(over, count, length, map, percent, fakePercent) {
 });
 // get preload image
 imgLoader.get('images/logo.png'); // 返回带版本号的图片地址，如果有cdn前缀就返回前缀
+
+
+// 设置微信分享内容
+var wxtool = mixtool.wx;
+wxtool.setShare({
+    title: 'xxx', // 分享标题
+    link: 'xxx', // 分享链接
+    img: 'xxx', // 分享图片
+    desc: 'xxx', // 分享
+    success: function() {...}, // 分享成功回调函数
+    fail: function() {...} // 分享失败回调函数
+});
+
+
+// 微信支付
+var wxtool = mixtool.wx;
+wxtool.pay({
+    openid: 'xxx', // 用户openId
+    product_id: 'xxx', // 商品ID
+    body: 'xxx', // 商品描述
+    total_fee: 'xxx', // 总金额
+    detail: 'xxx', // 商品详情
+    attach: 'xxx', // 附加数据
+    out_trade_no: 'xxx', // 商户订单号
+    success: function() {...}, // 支付成功回调函数
+    fail: function() {...} // 支付失败回调函数
+});
+
+
+// util工具集
+var util = mixtool.util;
+
+util.loadScript // 加载js
+util.loadImage // 加载图片
+util.nextFrame // requestAnimationFrame或者setTimeout fallback
+util.cancelFrame // cancelRequestAnimationFrame或者clearTimeout fallback
+util.setCssPrefix // 根据浏览器设置css前缀
+util.styleVender // 根据浏览器获取css前缀
+util.browser // 浏览器内核判断 ex: util.browser.versions.ios
+util.isFunction
+util.isString
+util.isArray
+util.getElement // 根据输入内容返回DOM元素，传入字符串就作为DOM的id，传入DOM元素返回本身
+util.getOffset // 根据输入内容返回DOM元素，传入字符串就作为DOM的id，传入DOM元素相对给定相对元素或body左上角的偏移量
+util.extend // 将源对象的所有属性拷贝到目标对象中
+util.genNonceStr // 获取随机数
+util.setCookie
+util.getCookie
+util.getUrlQuery // 读取url上带的参数
+util.buildUrlQuery // 拼接url参数
+
