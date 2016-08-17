@@ -6,14 +6,16 @@
  */
 
 
-var util = require('./lib/base.js');
-var tracking = require('./lib/log.js');
+var util      = require('./lib/base.js');
+var tracking  = require('./lib/log.js');
 var imgLoader = require('./lib/image-loader.js');
-var wx = require('./lib/wx.js');
+var wx        = require('./lib/wx.js');
+var ajax      = require('./lib/ajax.js');
 
 module.exports = {
     util: util,
     tracking: tracking,
     imgLoader: imgLoader,
-    wx: wx
+    wx: wx,
+    ajax: ajax
 };
