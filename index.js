@@ -11,11 +11,13 @@ var tracking  = require('./lib/log.js');
 var imgLoader = require('./lib/image-loader.js');
 var wx        = require('./lib/wx.js');
 var ajax      = require('./lib/ajax.js');
+var landscape = require('./lib/landscape.js');
 
 module.exports = {
     util: util,
     tracking: tracking,
     imgLoader: imgLoader,
     wx: wx,
-    ajax: ajax
+    ajax: ajax,
+    landscape: landscape
 };

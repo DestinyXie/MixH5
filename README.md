@@ -47,7 +47,7 @@ wxtool.setShare({
     title: 'xxx', // 分享标题
     link: 'xxx', // 分享链接
     img: 'xxx', // 分享图片
-    desc: 'xxx', // 分享
+    desc: 'xxx', // 分享描述
     success: function() {...}, // 分享成功回调函数
     fail: function() {...} // 分享失败回调函数
 });
@@ -65,6 +65,22 @@ wxtool.pay({
     out_trade_no: 'xxx', // 商户订单号
     success: function() {...}, // 支付成功回调函数
     fail: function() {...} // 支付失败回调函数
+});
+
+
+// 监测手机横竖屏
+mixtool.landscape({
+    'pic': 'xxx', // 提示图片
+    'text': '为了更好的体验，请将手机/平板竖过来', // 提示文字
+    'bgcolor': '#32373b', // 遮罩背景色
+    'txtColor': '#ffd40a', // 遮罩字颜色
+    'prefix': 'MixShine', // 遮罩class样式名 prefix + '_landscape'
+    'zIndex': 10000, // 遮罩z-index值
+    'init': false // 监测初始化后回调
+}, function() {
+    // 横屏回调
+}, function () {
+    // 竖屏回调
 });
 
 
@@ -90,3 +106,5 @@ util.getCookie
 util.getUrlQuery // 读取url上带的参数
 util.buildUrlQuery // 拼接url参数
 
+## License
+<a href="http://nate.mit-license.org">MIT</a>
