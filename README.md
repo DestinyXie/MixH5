@@ -19,7 +19,7 @@ tracking.add('cnzz', 'xxxxxx'); // cnzz site id
 
 setTimeout(function() {
     tracking.log('loaded');
-}, 1000};
+}, 1000);
 
 
 // 图片预加载
@@ -38,7 +38,7 @@ imgLoader.preloadImg(function(over, count, length, map, percent, fakePercent) {
     fakePercent: xxx // 模拟加载百分比, default: 50
 });
 // get preload image
-imgLoader.get('images/logo.png'); // 返回带版本号的图片地址，如果有cdn前缀就返回前缀
+imgLoader.get('images/logo.png'); // 返回带版本号的图片地址，如果有cdn前缀就返回前缀，该方法必须要在preloadImg方法执行之后才能调用
 
 
 // 设置微信分享内容

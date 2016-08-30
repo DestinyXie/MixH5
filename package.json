@@ -1,6 +1,6 @@
 {
   "name": "mix-h5",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "h5 develop tools, copyright mix corp.",
   "main": "index.js",
   "scripts": {
