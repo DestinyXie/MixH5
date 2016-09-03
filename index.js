@@ -6,7 +6,7 @@
  */
 
 
-var util      = require('./lib/base.js');
+var util      = require('mix-util');
 var tracking  = require('./lib/log.js');
 var imgLoader = require('./lib/image-loader.js');
 var wx        = require('./lib/wx.js');

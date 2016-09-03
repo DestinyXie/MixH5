@@ -2,7 +2,7 @@ H5 develop tools.
 
 ## Installation
 
-    npm install mix-h5
+    npm i mix-h5
 
 ## Usage
 
@@ -105,6 +105,7 @@ util.setCookie
 util.getCookie
 util.getUrlQuery // 读取url上带的参数
 util.buildUrlQuery // 拼接url参数
+```
 
 ## License
 <a href="http://nate.mit-license.org">MIT</a>
