@@ -68,7 +68,7 @@ wxtool.pay({
 });
 
 
-// 监测手机横竖屏
+// 监测手机横竖屏(限制横屏)
 mixtool.landscape({
     'pic': 'xxx', // 提示图片
     'text': '为了更好的体验，请将手机/平板竖过来', // 提示文字
@@ -82,6 +82,29 @@ mixtool.landscape({
 }, function () {
     // 竖屏回调
 });
+
+
+// 监测手机横竖屏(手动控制限制横屏还是竖屏)使用new关键字创建限制实例
+var restrict = new mixtool.landscape({
+    'manual': true, // 手动控制时必须设为true
+    'pic': 'xxx', // 提示图片
+    'text': '为了更好的体验，请将手机/平板竖过来', // 提示文字
+    'vetiText': '为了更好的体验，请将手机/平板横过来', // 视屏限制提示文字
+    'bgcolor': '#32373b', // 遮罩背景色
+    'txtColor': '#ffd40a', // 遮罩字颜色
+    'prefix': 'MixShine', // 遮罩class样式名 prefix + '_landscape'
+    'zIndex': 10000, // 遮罩z-index值
+    'init': false // 监测初始化后回调
+}, function() {
+    // 横屏回调
+}, function () {
+    // 竖屏回调
+});
+restrict.restrictLand(); // 限制横屏
+restrict.restrictVeti(); // 限制竖屏
+restrict.noRestrict(); // 无限制
+restrict.restrictAll(); // 横屏竖屏都限制
+
 
 
 // util工具集
