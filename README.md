@@ -68,6 +68,29 @@ wxtool.pay({
 });
 
 
+// 注：上述微信分享和微信支付功能默认配置的是密石信息科技公众号的appId，在其它公众号项目中使用这些微信功能，需要先执行initWXSDK方法传入相应的appid：
+wxtool.init({
+    appId: 'xxxxxx', // appid  页面域名需要与公众号中设置的回调一致
+    sdkUrl: '//res.wx.qq.com/open/js/jweixin-1.1.0.js', // 微信js sdk地址
+    siteSignApi: 'http://jishub.com/api/siteSign', // 签名接口
+    sitePayApi: 'http://jishub.com/api/sitePay', // 微信支付统一下单
+    jsApiList: [ // 开启的js接口：定制分享内容支付
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'chooseWXPay'
+    ],
+    initFail: function () { // 初始化失败
+        console.log('wx init fail');
+    },
+    initDone: function () { // 初始化成功
+        console.log('wx init done');
+    },
+    debug: false // debug模式
+}, function () {
+    // 初始化成功回调
+});
+
+
 // 监测手机横竖屏(限制横屏)
 mixtool.landscape({
     'pic': 'xxx', // 提示图片
@@ -88,8 +111,8 @@ mixtool.landscape({
 var restrict = new mixtool.landscape({
     'manual': true, // 手动控制时必须设为true
     'pic': 'xxx', // 提示图片
-    'text': '为了更好的体验，请将手机/平板竖过来', // 提示文字
-    'vetiText': '为了更好的体验，请将手机/平板横过来', // 视屏限制提示文字
+    'text': '为了更好的体验，请将手机/平板竖过来', // 限制横屏时的提示文字
+    'vetiText': '为了更好的体验，请将手机/平板横过来', // 限制竖屏时的提示文字
     'bgcolor': '#32373b', // 遮罩背景色
     'txtColor': '#ffd40a', // 遮罩字颜色
     'prefix': 'MixShine', // 遮罩class样式名 prefix + '_landscape'
