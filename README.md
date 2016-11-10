@@ -48,6 +48,11 @@ wxtool.setShare({
     link: 'xxx', // 分享链接
     img: 'xxx', // 分享图片
     desc: 'xxx', // 分享描述
+    shareLog: {
+        openid: 'xxx', // 用户微信openid
+        nickname: 'xxx', // 用户昵称
+        ...: 'xxx' // 头像等其他用户信息
+    }, // 分享统计
     success: function() {...}, // 分享成功回调函数
     fail: function() {...} // 分享失败回调函数
 });
