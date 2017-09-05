@@ -73,7 +73,7 @@ wxtool.pay({
 });
 
 
-// 注：上述微信分享和微信支付功能默认配置的是密石信息科技公众号的appId，在其它公众号项目中使用这些微信功能，需要先执行initWXSDK方法传入相应的appid：
+// 注：上述微信分享和微信支付功能默认配置的是逆行信息科技公众号的appId，在其它公众号项目中使用这些微信功能，需要先执行initWXSDK方法传入相应的appid：
 wxtool.init({
     appId: 'xxxxxx', // appid  页面域名需要与公众号中设置的回调一致
     sdkUrl: '//res.wx.qq.com/open/js/jweixin-1.1.0.js', // 微信js sdk地址
